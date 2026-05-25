@@ -508,6 +508,190 @@
   }
 
 }
+/* ================= SERVIÇOS ================= */
+
+.servicos {
+  width: 100%;
+  padding: 110px 8%;
+  background:
+    linear-gradient(to bottom,
+      #ffffff 0%,
+      #f8f8f5 100%);
+}
+
+.servicos-topo {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.servicos-subtitulo {
+  color: #0c7a35;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.servicos-subtitulo::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #d5a437;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+}
+
+.servicos-topo h2 {
+  font-size: 52px;
+  line-height: 1.1;
+  color: #0c7a35;
+  margin: 35px 0 25px;
+  font-weight: 900;
+}
+
+.servicos-topo p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.servicos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.servico-card {
+  background: #fff;
+  padding: 45px 35px;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.servico-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #d5a437;
+}
+
+.servico-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.10);
+}
+
+.servico-icone {
+  width: 85px;
+  height: 85px;
+  background: #f2f6f3;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.servico-icone i {
+  font-size: 38px;
+  color: #0c7a35;
+}
+
+.servico-card h3 {
+  font-size: 30px;
+  color: #0c7a35;
+  margin-bottom: 18px;
+}
+
+.servico-card p {
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.servico-card ul {
+  list-style: none;
+}
+
+.servico-card ul li {
+  margin-bottom: 15px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.servico-card ul li i {
+  color: #d5a437;
+  font-size: 15px;
+}
+
+/* CARD CENTRAL DESTACADO */
+
+.servico-card.destaque {
+  background: linear-gradient(135deg, #0c7a35, #095b28);
+  transform: scale(1.04);
+}
+
+.servico-card.destaque h3,
+.servico-card.destaque p,
+.servico-card.destaque ul li {
+  color: #fff;
+}
+
+.servico-card.destaque .servico-icone {
+  background: rgba(255,255,255,0.12);
+}
+
+.servico-card.destaque .servico-icone i {
+  color: #fff;
+}
+
+.servico-card.destaque::before {
+  background: #fff;
+}
+
+.servico-card.destaque ul li i {
+  color: #ffd369;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:1100px){
+
+  .servicos-container{
+    grid-template-columns: 1fr;
+  }
+
+  .servico-card.destaque{
+    transform: none;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .servicos{
+    padding: 90px 25px;
+  }
+
+  .servicos-topo h2{
+    font-size: 38px;
+  }
+
+}
     /* ================= FOOTER ================= */
 
     footer {
@@ -657,8 +841,8 @@
     <nav id="nav">
 
       <a href="#" class="active">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
       <a href="#">Frota</a>
       <a href="#">Feedbacks</a>
       <a href="#">Contato</a>
@@ -852,7 +1036,99 @@
 
   </section>
 
+<!-- ================= SERVIÇOS ================= -->
 
+<section class="servicos" id="servicos">
+
+  <div class="servicos-topo fade">
+
+    <span class="servicos-subtitulo">NOSSOS SERVIÇOS</span>
+
+    <h2>SOLUÇÕES EM TRANSPORTE<br>COM SEGURANÇA E QUALIDADE</h2>
+
+    <p>
+      A Manga Transportes oferece serviços especializados em fretamento,
+      atendendo empresas, trabalhadores e passageiros com compromisso,
+      pontualidade e excelência em cada trajeto.
+    </p>
+
+  </div>
+
+  <div class="servicos-container">
+
+    <!-- SERVIÇO 1 -->
+
+    <div class="servico-card fade">
+
+      <div class="servico-icone">
+        <i class="fa-solid fa-bus"></i>
+      </div>
+
+      <h3>Fretamento Rural</h3>
+
+      <p>
+        Transporte seguro e eficiente para trabalhadores rurais,
+        com rotas organizadas, veículos confortáveis e compromisso
+        total com horários.
+      </p>
+
+      <ul>
+        <li><i class="fa-solid fa-check"></i> Rotas personalizadas</li>
+        <li><i class="fa-solid fa-check"></i> Pontualidade garantida</li>
+        <li><i class="fa-solid fa-check"></i> Equipe experiente</li>
+      </ul>
+
+    </div>
+
+    <!-- SERVIÇO 2 -->
+
+    <div class="servico-card destaque fade">
+
+      <div class="servico-icone">
+        <i class="fa-solid fa-building"></i>
+      </div>
+
+      <h3>Transporte Empresarial</h3>
+
+      <p>
+        Soluções completas para empresas que precisam transportar
+        colaboradores com conforto, organização e máxima segurança.
+      </p>
+
+      <ul>
+        <li><i class="fa-solid fa-check"></i> Atendimento corporativo</li>
+        <li><i class="fa-solid fa-check"></i> Frota moderna</li>
+        <li><i class="fa-solid fa-check"></i> Viagens programadas</li>
+      </ul>
+
+    </div>
+
+    <!-- SERVIÇO 3 -->
+
+    <div class="servico-card fade">
+
+      <div class="servico-icone">
+        <i class="fa-solid fa-road"></i>
+      </div>
+
+      <h3>Viagens e Excursões</h3>
+
+      <p>
+        Transporte para eventos, viagens regionais e excursões,
+        proporcionando conforto, tranquilidade e experiência profissional.
+      </p>
+
+      <ul>
+        <li><i class="fa-solid fa-check"></i> Eventos e turismo</li>
+        <li><i class="fa-solid fa-check"></i> Atendimento personalizado</li>
+        <li><i class="fa-solid fa-check"></i> Conforto em cada viagem</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- FOOTER -->
 
@@ -906,21 +1182,46 @@
       });
 
     });
-    const links = document.querySelectorAll('nav a');
+    // ================= NAV ATIVA AO ROLAR =================
 
-    links.forEach(link => {
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-      link.addEventListener('click', () => {
+const observerNav = new IntersectionObserver((entries) => {
 
-        links.forEach(item => {
-          item.classList.remove('active');
-        });
+  entries.forEach(entry => {
 
-        link.classList.add('active');
+    if (entry.isIntersecting) {
+
+      const id = entry.target.getAttribute("id");
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        // INÍCIO
+        if (!id && link.textContent.includes("Início")) {
+          link.classList.add("active");
+        }
+
+        // OUTRAS SEÇÕES
+        if (id && link.getAttribute("href") === `#${id}`) {
+          link.classList.add("active");
+        }
 
       });
 
-    });
+    }
+
+  });
+
+}, {
+  threshold: 0.6
+});
+
+// OBSERVA TODAS AS SEÇÕES
+sections.forEach(section => {
+  observerNav.observe(section);
+});
 
   </script>
 
