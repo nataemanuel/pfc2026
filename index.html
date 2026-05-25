@@ -18,7 +18,7 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #f5f1eb;
+      background: #ffffff;
       color: #222;
       overflow-x: hidden;
     }
@@ -27,7 +27,7 @@
 
     header {
       width: 100%;
-      height: 60px;
+      height: 70px;
       background: #ffffff;
       display: flex;
       align-items: center;
@@ -117,7 +117,7 @@
     }
 
     .hero h2 {
-      font-size: 3rem;
+      font-size: 4rem;
       line-height: 1.05;
       margin-bottom: 30px;
       font-weight: 800;
@@ -212,7 +212,7 @@
 
     .features {
       width: 100%;
-      background: #f8f5f1;
+      background: #ffffff;
       padding: 55px 70px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -249,7 +249,265 @@
       color: #4a4a4a;
       font-size: 1.05rem;
     }
+/* SOBRE */
+.sobre {
+  width: 100%;
+  padding: 100px 8%;
+  background: #fff;
+}
 
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* TEXTO */
+.sobre-texto {
+  flex: 1;
+  min-width: 320px;
+}
+
+.sobre-subtitulo {
+  color: #0c7a35;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  position: relative;
+}
+
+.sobre-subtitulo::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #d5a437;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.sobre-texto h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #0c7a35;
+  margin: 35px 0 20px;
+  line-height: 1;
+}
+
+.sobre-texto p {
+  color: #444;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.sobre-cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  gap: 18px;
+}
+
+.icone {
+  min-width: 75px;
+  height: 75px;
+  background: #f2f3ec;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone i {
+  font-size: 32px;
+  color: #0c7a35;
+}
+
+.card h3 {
+  color: #0c7a35;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* VISÃO */
+.visao-box {
+  margin-top: 35px;
+  background: #f5f5ef;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icone-visao {
+  width: 85px;
+  height: 85px;
+  background: #0c7a35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-visao i {
+  color: #fff;
+  font-size: 35px;
+}
+
+.visao-box h3 {
+  color: #0c7a35;
+  margin-bottom: 10px;
+}
+
+/* ITENS */
+.sobre-itens {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.item i {
+  font-size: 42px;
+  color: #0c7a35;
+  margin-bottom: 15px;
+}
+
+.item h4 {
+  color: #0c7a35;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* IMAGEM */
+.sobre-imagem {
+  flex: 1;
+  min-width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-imagem img {
+  width: 90%;
+  height: 800px; 
+  max-width: 600px;
+  border-radius: 35px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* FUNDO VERDE */
+.sobre-imagem::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  background: #0c7a35;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+/* BORDA AMARELA */
+.sobre-imagem::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #d5a437;
+  border-radius: 40px;
+  z-index: 0;
+}
+
+/* BOX FUNDADORES */
+.fundadores-box {
+  position: absolute;
+  bottom: -25px;
+  right: -20px;
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 5;
+}
+
+.fundadores-box i {
+  width: 65px;
+  height: 65px;
+  background: #eef7f0;
+  color: #0c7a35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.fundadores-box h4 {
+  color: #0c7a35;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.fundadores-box p {
+  margin: 0;
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media(max-width: 991px) {
+
+  .sobre-container {
+    flex-direction: column;
+  }
+
+  .sobre-texto h2 {
+    font-size: 50px;
+  }
+
+  .fundadores-box {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  .sobre-imagem::before,
+  .sobre-imagem::after {
+    display: none;
+  }
+
+}
     /* ================= FOOTER ================= */
 
     footer {
@@ -458,9 +716,100 @@
 
   </section>
 
-  <!-- FEATURES -->
+  
 
-  <section class="features">
+  
+  <!-- SOBRE NÓS -->
+<section class="sobre" id="sobre">
+  <div class="sobre-container">
+
+    <!-- TEXTO -->
+    <div class="sobre-texto">
+
+      <span class="sobre-subtitulo">SOBRE NÓS</span>
+
+      <h2>QUEM SOMOS?</h2>
+
+      <p>
+        A <strong>Manga Transportes</strong> é uma microempresa paranaense,
+        sediada em Brasilândia do Sul – PR, com mais de dez anos de experiência
+        no mercado de fretamento.
+      </p>
+
+      <p>
+        Somos especialistas no transporte de trabalhadores rurais e temos forte
+        compromisso com a segurança, a pontualidade e a excelência no atendimento.
+      </p>
+
+      <!-- CARDS -->
+      <div class="sobre-cards">
+
+        <div class="card">
+          <div class="icone">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+            <h3>ONDE ATUAMOS</h3>
+            <p>
+              Atendemos diversos municípios da região com segurança,
+              qualidade e responsabilidade.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icone">
+            <i class="fa-solid fa-users"></i>
+          </div>
+
+          <div>
+            <h3>NOSSA MISSÃO</h3>
+            <p>
+              Fornecer um serviço digno, eficiente e confiável,
+              priorizando sempre o conforto dos passageiros.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VISÃO -->
+      <div class="visao-box">
+        <div class="icone-visao">
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <div>
+          <h3>NOSSA VISÃO</h3>
+          <p>
+            Ser referência no setor de transporte rural,
+            oferecendo atendimento humano e excelência em cada viagem.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- IMAGEM -->
+    <div class="sobre-imagem">
+
+      <img src="profissionais-confiantes-latinos-em-pe-de-terno-contra-um-fundo-isolado_662251-330.avif" alt="Fundadores" height="500px" height="400px">
+
+      <div class="fundadores-box">
+        <i class="fa-solid fa-users"></i>
+
+        <div>
+          <h4>IRINEU E SOLANGE DA SILVA</h4>
+          <p>Fundadores da Manga Transportes</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="features">
 
     <div class="feature fade">
 
@@ -502,6 +851,7 @@
     </div>
 
   </section>
+
 
 
   <!-- FOOTER -->
